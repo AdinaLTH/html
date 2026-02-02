@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피자나눠먹기1</title>
+</head>
+<body>
+  <script>
+    let n = prompt();
+    function solution(n){
+      let answer = 0;
+      if(n%7==0) answer += n/7;
+      else answer += n/7+1;
+      return parseInt(answer);
+    }
+    console.log(solution(n));
+  </script>
+</body>
+</html>

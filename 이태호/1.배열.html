@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <script>
+        // 배열에 1에서 100사이의 무작위 수 10개를 입력
+        // 배열의 합 계산
+        // 최대값과 최소값 구하기 
+        // 콘솔창에 결과 출력력
+        let numArray = [];
+        for(let i=0; i<10; i++) {
+            numArray[i] = Math.floor(Math.random() * 100) + 1;
+        }
+
+        // 알고리즘 활용
+        let max = 0;
+        let min = 101;
+        let sum = 0;
+        for(let i=0; i<10; i++){
+            sum += numArray[i];
+            if(max < numArray[i]) {
+                max = numArray[i];
+            }
+            if(min > numArray[i]) {
+                min = numArray[i];
+            }
+        }
+
+        /* 교수님이 하신 것
+        let max = numArray[0];
+        let min = 101;
+        let sum = numArray[0];
+        for(let ele of numArray) {
+            if(max < ele) max = ele;
+            if(min > ele) min = ele;
+            sum += ele;
+        } */
+        console.log(numArray);
+        console.log(`배열의 합: ${sum}, 배열의 최대값: ${max}, 배열의 최소값: ${min}`);
+
+        // 정렬 활용
+        /* let sum = 0;
+        for(const ele of numArray) {
+            sum += ele;
+        }
+        numArray.sort((a,b) => a-b);
+        let max = numArray[numArray.length-1];
+        let min = numArray[0]; */
+
+        // 메소드 활용
+        // let max = Math.max(...numArray);
+        // let min = Math.min(...numArray);
+        // let sum = numArray.reduce((p, e) => p + e);
+    </script>
+
+    
+</body>
+</html>

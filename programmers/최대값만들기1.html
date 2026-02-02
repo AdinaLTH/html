@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최대값만들기1</title>
+</head>
+<body>
+  <script>
+    let numbers = [1,2,3,4,5];
+    function solution(numbers){
+      let answer = 0;
+      let temp = 0;
+      for(let i=0; i<numbers.length; i++){
+        for(let j=0; j<numbers.length; j++){
+          if(numbers[i] > numbers[j]) {;
+            temp = numbers[i];
+            numbers[i] = numbers[j];
+            numbers[j] = temp;
+          }
+        }
+      }
+      console.log(numbers);
+      answer = numbers[0] * numbers[1];
+      return answer;
+    }
+    console.log(solution(numbers))
+  </script>
+</body>
+</html>

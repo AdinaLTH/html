@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로그래머스</title>
+</head>
+<body>
+  <script>
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function solution(numbers) {
+      let answer = 0;
+      let avg = 0;
+      for (const num of numbers){
+        avg += num;
+      }
+        answer = avg/numbers.length;
+        return answer;
+    }
+    console.log(solution(numbers));
+  </script>
+</body>
+</html>

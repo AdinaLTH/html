@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도전문제</title>
+  <style>
+    table {
+      border: 1px solid rgb(255, 136, 0);
+      margin: 0 auto;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid rgb(255, 136, 0);
+      padding: 5px;
+    }
+    th {
+      background-color: rgba(248, 189, 150, .4);
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // 문제1
+    // 문제2
+    // 문제3
+    // 문제4
+    // 문제5
+    // 문제6
+    // let num = Number(prompt('숫자 입력'));
+    // let count = 0;
+    // let answer = '';
+    // for(let i=3; i<=num; i+=3){
+    //   if(i<=num-3){
+    //     answer += (`${i},`);
+    //     count++;
+    //   }else{
+    //     answer += (`${i}`);
+    //     count++;
+    //   }
+    // }
+    // console.log(answer);
+    // console.log(`${num}까지의 3의 배수 개수 : ${count}`);
+    // 문제7
+    // 문제8
+    
+    // 별찍기
+    /* stars = '';
+    for(i=1; i<=7; i++){
+      for(j=1; j<=4-i; i++){
+        stars += ' ';
+      }
+      for(j=1; j<=2*i-1; j++){
+        stars += '*';
+      }
+      stars += '\n';
+    }
+    console.log(stars); */
+
+    let layout = `
+    <table>
+      <tr>
+        <th>키</th>
+        <th>값</th>
+        <th>설명</th>
+      </tr>
+      `;
+    function Product (name, weight, price) {
+      this.name = name;
+      this.weight = weight;
+      this.price = price;
+    }
+
+    Product.prototype.calculate = function (weight) {
+      return parseInt(weight/100) * this.price;
+    }
+
+    let meat = new Product('삼겹살', 100, 1690);
+
+    layout += `
+    <tr>
+      <td>이름</td>
+      <td>${meat.name}</td>
+      <td rowspan = "3">판매가격 책정 객체 만들기</td>
+    </tr>
+    <tr>
+      <td>무게</td>
+      <td>${meat.weight}g</td>
+    </tr>
+    <tr>
+      <td>가격</td>
+      <td>${meat.price}원</td>
+    </tr>
+    <tr>
+        <th>메소드</th>
+        <th colspan = "2">기능</th>
+    </tr>
+    <tr>
+      <td>calculate</td>
+      <td>구매가격 계산</td>
+      <td>${meat.calculate(500)}원</td>
+    </tr>
+    `;
+    /* for (let key in meat) {
+      layout += `
+      <tr>
+        <td>${key}</td>
+      </tr>
+      `
+    } */
+    layout += `</table>`;
+    document.write(layout);
+    console.log(meat);
+    console.log(meat.calculate(500));
+  </script>
+</body>
+</html>

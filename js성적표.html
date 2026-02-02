@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>성적표</title>
+  <link rel="stylesheet" href="css/js성적표.css">
+  <!-- <script defer src="js/js성적표.js"></script> -->
+</head>
+<body>
+  <h1>성적표</h1>
+  <script src="js/js성적표.js"></script>
+  <script>
+    /* let hong = new Student('홍길동', 100, 60, 80);
+    let sung = new Student('성춘향', 88, 90, 100);
+    let lee = new Student('이몽룡', 99, 70, 88); */
+
+    /* let hong  = {
+      name : 'hong',
+      kor : 100,
+      eng : 80,
+      math : 70,
+      getSum : function () {
+        return this.kor + this.eng + this.math;
+      },
+      getAvg : function () {
+        return this.getSum()/3;
+      }
+    }
+
+    let sung  = {
+      name : 'sung',
+      kor : 80,
+      eng : 100,
+      math : 80,
+      getSum : function () {
+        return this.kor + this.eng + this.math;
+      },
+      getAvg : function () {
+        return this.getSum()/3;
+      }
+    }
+
+    let lee  = {
+      name : 'lee',
+      kor : 100,
+      eng : 100,
+      math : 100,
+      getSum : function () {
+        return this.kor + this.eng + this.math;
+      },
+      getAvg : function () {
+        return this.getSum()/3;
+      }
+    }
+
+    document.write(`<p>${hong.name} : ${hong.getSum()} : ${hong.getAvg()}</p>`);
+    document.write(`<p>${sung.name} : ${sung.getSum()} : ${sung.getAvg()}</p>`);
+    document.write(`<p>${lee.name} : ${lee.getSum()} : ${lee.getAvg()}</p>`);
+    */
+
+    // 성적표 만들기
+    // 학생 hong, sung, lee 객체 만들기
+    // 학생의 속성: 이름, 국어점수, 영어점수, 수학점수
+    // 메소드: 총점 평균 구하는 메소드 작성
+    
+    // 학생 객체 생성자 함수
+    
+    /* for(let i=0; i<students.length; i++) {
+      document.write(`<p>${students[i].name} : ${students[i].getSum()} : ${students[i].getAvg()}</p>`);
+    } */
+  
+    // 문서에 표로 작성
+    // 배열에 학생 객체 저장
+    // 문서에 표 작성
+    // 과목 추가 : java
+    // 등급 추가 : A, B, C, D, F
+    // 학생 데이터 5명
+    // css작성 표 디자인
+    // css, js 외부파일로 저장 -> 연결
+    // 총점을 이용해서 석차 구하기
+        // 석차구해서 rank(키) 에 추가
+    
+    let students = [new Student('홍길동', 100, 60, 80, 100), 
+    new Student('성춘향', 88, 90, 100, 80), 
+    new Student('이몽룡', 99, 70, 88, 99),
+    new Student('aaa', 90, 100, 90, 100),
+    new Student('bbb', 90, 80, 80, 81),
+    new Student('ccc', 80, 70, 70, 72),
+    new Student('ddd', 70, 60, 60, 63),
+    new Student('fff', 50, 45, 51, 57)
+    ];
+
+    console.log(students[1] instanceof Object)
+    console.log(students[1] instanceof Student)
+    let person = {
+      name : '아디나'
+    }
+    console.log(person instanceof Student)
+
+    for(let i=0; i<students.length; i++) {
+      let count = 1;
+      let temp = students[i].getSum();
+      for(let j=0; j<students.length; j++) {
+        let temp2 = students[j].getSum();
+        if(temp < temp2) {
+          count++;
+        }
+      }
+      students[i].rank = count;
+    }
+    // function getRank () {
+    // }
+    
+    let layout = `
+      <table>
+        <h4>성적표</h4>
+        <tr>
+          <th>이름</th>
+          <th>총점</th>
+          <th>평균</th>
+          <th>등급</th>
+          <th>석차</th>
+        </tr>
+      `;
+    for (let i=0; i<students.length; i++){
+      // getRank();
+      layout += '<tr>'
+      layout += `<td>${students[i].name}</td>
+      <td>${students[i].getSum()}</td>
+      <td>${students[i].getAvg()}</td>
+      <td>${students[i].getGrade()}</td>
+      <td>${students[i].rank}</td>`  
+      layout += '</tr>'
+    }
+    layout += '</table>';
+    document.write(layout)
+  </script>
+</body>
+</html>

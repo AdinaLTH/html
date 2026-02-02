@@ -1,0 +1,109 @@
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* 헤더영역 */
+header{
+  background-color: rgb(184, 69, 184);
+  overflow: hidden;  
+}
+header img{
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin: 10px;
+}
+nav{
+  float: right;
+  width: 500px;
+  padding: 10px;
+}
+nav li{
+  float: left;
+  list-style: none;
+  padding: 10px;
+}
+nav li:hover a{
+  color: black;
+  background-color: beige;
+  border-radius: 20px;
+}
+nav li a:active{
+  background-color: red;
+}
+nav li a:focus{
+  background-color: #ff0;
+  border-radius: 20px;
+  outline: 1px solid #ccc;
+}
+nav a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* 메인영역 */
+main{
+  width: 800px;
+  float: left;
+}
+section h1{
+  background: url(../img/사과.jpg) no-repeat left center;
+  background-size: 32px 32px;
+  padding-left: 50px;
+}
+section h1::after{
+  content: "긴급!!";
+  font-size: 14px;
+  background-color: #f00;
+  color: #fff;
+  position: relative;
+  top: -20px;
+  margin-left: 10px;
+}
+::selection{
+  background: #000;
+  color: #ff0;
+}
+article{
+  width: 368px;
+  height: 245px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  float: left;
+}
+article p{
+  text-align: justify;
+}
+article p::first-line{
+  color: #f00;
+}
+article p::first-letter{
+  font-size: 20px;
+  background-color: yellow;
+}
+/* 어사이드 영역 */
+aside{
+  width: 180px;
+  float: right;
+  margin-top: 95px;
+}
+aside img{
+  width: 180px;
+  height: 179px;
+}
+
+/* 푸터영역 */
+footer{
+  background-color: skyblue;
+  clear: both;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+footer p{
+  margin-top: 0;
+}

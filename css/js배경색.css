@@ -1,0 +1,36 @@
+#container {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+ul li {
+  width: 130px;
+  border: 1px solid #888;
+  padding: 0;
+  list-style: none;
+  margin: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+ul li button {
+  width: 130px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+#color{
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid #888;
+  border-radius: 5px;
+}

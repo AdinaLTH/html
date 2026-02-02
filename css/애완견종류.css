@@ -1,0 +1,133 @@
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* 헤더영역 */
+header{
+  background-color: rgb(9, 75, 92);
+  overflow: hidden;
+}
+header img{
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin: 10px;
+}
+header nav{
+  float: right;
+  /* width: 500px; */
+  /* line-height: 60px; */
+  padding: 10px;
+  
+}
+header nav li{
+  list-style: none;
+  float: left;
+  padding: 10px 20px;
+}
+header nav li:nth-child(2n){
+  background-color: #f00;
+}
+header nav li:nth-child(2n+1){
+  background-color: #00f;
+}
+nav li:first-child{
+  box-shadow: 2px 2px 3px #fff;
+}
+nav li:last-child{
+  box-shadow: 3px 3px 5px #fff;
+}
+header nav a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+/* 메인영역 */
+main{
+  border: 3px solid skyblue;
+  padding: 10px;
+}
+section{
+  overflow: hidden;
+}
+#anchor li{
+  background-color: beige;
+}
+#anchor a{
+  color: #f00;
+}
+#anchor a:hover{
+  color: aqua;
+}
+#anchor:has(a:hover) a:not(:hover){
+  opacity: 0.5;
+}
+section nav{
+  float: right;
+  width: 750px;
+  padding: 10px;
+}
+section nav li{
+  list-style: none;
+  float: left;
+  padding: 10px 20px;
+}
+section nav a{
+  text-decoration: none;
+  color: #00f;
+  font-weight: bold;
+}
+.discription{
+  border-radius: 10px;
+  border: 1px dotted rgb(255, 177, 225);
+  padding: 10px;
+}
+#act:target,
+#soon:target,
+#sanap:target{
+  background-color: yellowgreen;
+}
+figure{
+  /* padding-left: 145px;
+  padding-right: 100px; */
+  text-align: center;
+}
+figure img{
+  width: 150px;
+  height: 100px;
+  /* text-align: center; */
+}
+figcaption{
+  text-align: center;
+}
+
+/* 푸터영역 */
+#f_list{
+  background-color: rgb(255, 177, 225);
+  padding: 5px;
+}
+footer{
+  background-color: rgb(8, 94, 165);
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+}
+footer p{
+  margin-top: 0;
+}
+#top{
+  width: 85px;
+  height: 85px;
+  background-color: #f00;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 85px;
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+}
+#top a{
+  text-decoration: none;
+  color: #fff;
+}

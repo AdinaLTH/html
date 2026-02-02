@@ -1,0 +1,40 @@
+#container{
+  width: 1170px;
+  height: 520px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+header{
+  color: #ccc;
+}
+
+.travel-card{
+  width: 250px;
+  height: 340px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50% 50%;
+  position: absolute;
+  left: 75px;
+  top: 30px;
+}
+
+.travel-card h4, .travel-card p{
+  /* text-align: center; */
+  /* color: black; */
+  position: relative;
+  top: 200px;
+}
+

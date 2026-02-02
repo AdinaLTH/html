@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경색</title>
+  <link rel="stylesheet" href="css/js배경색.css">
+</head>
+<body>
+  <div id="container">
+    <ul>
+      <li><button type="button" id="green">Green</button></li>
+      <li><button type="button" id="orange">Orange</button></li>
+      <li><button type="button" id="purple">Purple</button></li>
+    </ul>
+
+    <div id="color"></div>
+    <script>
+      let greenBtn = document.querySelector('#green');
+      let orangeBtn = document.querySelector('#orange');
+      let purpleBtn = document.querySelector('#purple');
+      let color = document.querySelector('#color');
+
+      greenBtn.onclick = greenFunc
+      orangeBtn.onclick = orangeFunc
+      purpleBtn.onclick = purpleFunc
+
+
+      function greenFunc () {
+        color.style.backgroundColor = 'green';
+      }
+
+      function orangeFunc () {
+        color.style.backgroundColor = 'orange';
+      }
+
+      function purpleFunc () {
+        color.style.backgroundColor = 'purple';
+      }
+    </script>
+  </div>
+</body>
+</html>

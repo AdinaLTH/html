@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>회원 가입</title>
+	<link rel="stylesheet" href="css/회원가입.css">
+	<script defer src="js/회원가입.js"></script>
+</head>
+<body>
+	<div id="container">
+		<h1>회원가입 정보</h1>
+		<hr>
+		<form action="#" id="register" name="register" method="post">
+			<ul id="user-info">
+				<li>
+					<label for="user-id" class="field">아이디</label>
+					<input type="text" id="user-id" name="user_id" placeholder="3~10자리의 영문과 숫자로 입력" required>
+				</li>
+				<li>
+					<label for="tel" class="field">전화번호</label>
+					<input type="tel" id="tel" name="tel" required>
+				</li>
+				<li>
+					<label for="user-pw1" class="field">비밀번호</label>
+					<input type="password" id="user-pw1" name="user-pw1" placeholder="4자리 이상" required>
+				</li>
+				<li>
+					<label for="user-pw2" class="field">비밀번호 확인</label>
+					<input type="password" id="user-pw2" name="user-pw2" required>
+				</li>
+				<li>
+					<label class="field">메일링 수신</label>
+					<label class="radio"><input type="radio" value="yes" name="mailing" checked>예</label>
+					<label class="radio"><input type="radio" value="no" name="mailing">아니오</label>
+				</li>
+				<li>
+					<label class="field">sns</label>
+						<label>
+							<input type="checkbox" value="facebook" name="sns" checked>
+							페이스북</label>
+						<label>
+							<input type="checkbox" value="instar" name="sns" checked>
+							인스타</label>
+						<label>
+							<input type="checkbox" value="x" name="sns">
+							엑스</label>					
+				</li>
+				<li>
+					<label>색상선택</label>
+					<select id="select" name="dropMenu">
+						<optgroup label="따뜻한 색">
+							<option value="red">빨강</option>
+							<option value="orange">오렌지</option>
+							<option value="yellow">노랑</option>
+						</optgroup>
+						<optgroup label="차가운색">
+							<option value="gray">회색</option>
+							<option value="blue">파랑</option>
+							<option value="white">흰색</option>
+						</optgroup>
+					</select>
+				</li>
+			</ul>
+			<ul id="buttons">
+				<li>
+					<button type="submit" >가입하기</button>					
+					<button type="reset" >취소</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+	<script>
+		// radio
+		let radio = document.register.mailing;
+		let radioValue = document.querySelector('input[name=mailing]:checked').value;
+		console.log(radio);
+		console.log(radioValue);
+
+		let checkBox = document.register.sns;
+		console.log(checkBox);
+		checkBoxs = document.querySelectorAll('input[name=sns]:checked');
+		console.log(checkBoxs);
+		for(let checkBox of checkBoxs) {
+			console.log(checkBox.value);
+		}
+
+		// 드롭다운메뉴
+		let dmenu = document.register.dropMenu;
+		console.log(dmenu);
+		let dselect = dmenu.options[dmenu.selectedIndex].value;
+		console.log(dselect);
+		// 화면에 보이는 내용
+		let show = dmenu.options[dmenu.selectedIndex].innerText;
+		console.log(show);
+	</script>
+</body>
+</html>

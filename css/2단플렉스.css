@@ -1,0 +1,37 @@
+#container{
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #ccc;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3px;
+}
+header{
+  background-color: rgb(131, 255, 255);
+  width: 100%;
+}
+section{
+  background-color: rgb(9, 109, 0);
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
+}
+section h3{
+  width: 100%;
+}
+section p{
+  width: 30%;
+  border: 1px solid #0077ff;
+}
+aside{
+  background-color: rgb(255, 203, 33);
+  width: 18%;
+}
+footer{
+  background-color: rgb(255, 172, 172);
+  width: 100%;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <link rel="stylesheet" href="css/성적표.css">
+  <style>
+    #event {
+      width: 300px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    img {
+      width: 300px;
+      height: 300px;
+    }
+    #desc {
+      display: none;
+    }
+    button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>함수</h1>
+  <!-- <button id="btn" onclick="whenClick()">알림창 띄우기</button> -->
+  <div id="event">
+    <img src="img/아디나.png" alt="아디나">
+    <button type="button" id="openBtn">상세설명 보기</button>
+    <div id="desc">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime quae id assumenda corporis esse ad qui culpa placeat molestias, quaerat debitis aut at suscipit incidunt, mollitia accusamus aperiam. Asperiores, placeat.</p>
+      <button type="button" id="closeBtn">상세설명 닫기</button>
+    </div>
+  </div>
+  <!-- <script src="js/성적표.js"></script> -->
+  <script>
+    // 이벤트: 웹문서 안에서 사용자의 동작
+    // 이벤트를 걸기 => 실행문(함수)
+    // 버튼에 클릭 이벤트가 걸리면 알림창 띄우기
+    // let btn = document.querySelector('#btn');
+    // btn.onclick = whenClick;
+
+    function whenClick () {
+      alert('버튼이 클릭되었습니다!');
+    }
+
+    // 버튼 가져오기
+    let openBtn = document.querySelector('#openBtn');
+    let closeBtn = document.querySelector('#closeBtn');
+    let caption = document.querySelector('#desc');
+
+    openBtn.onclick = function () {
+      caption.style.display = 'block';
+      openBtn.style.display = 'none';
+    }
+
+    closeBtn.onclick = function () {
+      caption.style.display = 'none';
+      openBtn.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

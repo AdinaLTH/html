@@ -1,0 +1,39 @@
+#container{
+  border: 1px solid #ccc;
+  width: 960px;
+  padding: 20px;
+  margin: 0 auto;
+}
+header{
+  border: 1px solid #ccc;
+  pad: 10px;
+  margin-bottom: 20px;
+}
+aside{
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  width: 220px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#s_left{
+  float: left;
+}
+#s_right{
+  float: right;
+}
+section{
+  border: 1px solid #ccc;
+  width: 384px;
+  padding: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  float: left;
+  margin-bottom: 20px;
+}
+footer{
+  background-color: beige;
+  border: 1px solid #ccc;
+  clear: both;
+  padding: 10px;
+}

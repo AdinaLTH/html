@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌석배치도</title>
+    <style>
+        table{
+            /* border: 1px solid #ccc; */
+            border-collapse: collapse;
+            empty-cells: hide;
+            margin-top: 30px;
+
+        }
+        td{
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>좌석배치도</h1>
+    <form name="output">
+        <label for="person">입장객 수</label>
+        <input type="text" id="person" name="person" size="5">
+        <label for="colNum">1줄 자릿 수</label>
+        <input type="text" id="colNum" name="colNum" size="5">
+        <button type="button" id="btn">배치도</button>
+    </form>
+    <div id="layout"></div>
+
+    <script>
+        let btn = document.querySelector('#btn');
+        let person = document.querySelector('#person');
+        let colNum = document.querySelector('#colNum');
+        
+        btn.addEventListener('click', batch)
+        
+        function batch() {
+            let seatNum = 1;
+            let result = '<table>';
+            // let rowNum = parseInt(person.value/colNum.value);
+            // rowNum = Number(person.value%colNum.value) == 0 ? rowNum : ++rowNum;
+            let rowNum = Math.ceil(person.value/colNum.value);
+            for(let i=1; i<=rowNum; i++) {
+                result += '<tr>'
+                for(let j=1; j<=colNum.value; j++) {
+                    if(seatNum > person.value) {
+                        break;
+                    }
+                    result += `<td>좌석 : ${seatNum}</td>`;
+                    seatNum++;
+                }
+                result += '</tr>';
+            }
+            result += '</table>';
+            let layout = document.querySelector('#layout');
+            layout.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

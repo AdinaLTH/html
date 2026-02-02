@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자지원서</title>
+  <link rel="stylesheet" href="/css/개발자지원서.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>국제 개발자 지원서</h1>
+      <p>HTML, CSS, javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    </header>
+    <hr>
+    <form action="login.php" method="post" name="login">
+      <fieldset id="pi">
+        <legend>개인정보</legend>
+        <ul>
+          <li>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" placeholder="공백 없이 입력하세요">
+          </li>
+          <li>
+            <label for="tel">연락처</label>
+            <input type="tel" name="tel" id="tel">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>지원분야</legend>
+        <ul>
+          <li>
+            <input type="radio" name="wp" id="wp" checked>
+            <span>웹 퍼블리싱</span>
+          </li>
+          <li>
+            <input type="radio" name="wp" id="wa">
+            <span>웹 애플리케이션 개발</span>
+          </li>
+          <li>
+            <input type="radio" name="wp" id="de">
+            <span>개발 환경 개선</span>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>지원 동기</legend>
+        <ul>
+          <li>
+            <textarea name="dongi" id="dongi" cols="60" rows="5" placeholder="지원 동기 간략히 써 주세요"></textarea>
+          </li>
+          <li>
+            <button type="submit">접수하기</button>
+            <button type="reset">다시쓰기</button>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주소록</title>
+  <style>
+    table {
+      border: 1px solid #777;
+      text-align: center;
+      border-collapse: collapse;
+    }
+    th, tr, td {
+      border: 1px solid #777;
+      padding: 5px 20px;
+    }
+    th {
+      background-color: #ddeedd;
+    }
+  </style>
+</head>
+<body>
+  <h1>주소록</h1>
+  <form name="register">
+    <ul id="addressBook">
+      <li>
+        <label for="name">이름</label>
+        <input type="text" name="info" id="name">
+      </li>
+      <li>
+        <label for="tel">연락처</label>
+        <input type="text" name="info" id="tel">
+      </li>
+      <li>
+        <label for="addr">주소</label>
+        <input type="text" name="info" id="addr">
+        <button type="button" name="save" id="save" class="saveBtn">저장</button>
+      </li>
+    </ul>
+  </form>
+  <hr>
+  <div id="result"></div>
+  <script>
+    // form에서 이름, 연락처, 주소 => 입력
+    //   주소록 버튼 클릭되면 => 입력된 자료 => 배열에 저장 =>  표로 작성(문서)
+    //   출력 위치는 입력 폼 아래
+    let name = document.querySelector('#name');
+    let tel = document.querySelector('#tel');
+    let addr = document.querySelector('#addr');
+    let saveBtn = document.querySelector('#save');
+    let result = document.querySelector('#result');
+
+    let addrData = [];
+    saveBtn.addEventListener('click', saveFunc);
+    
+    function Human(name, tel, addr) {
+      this.name = name,
+      this.tel = tel,
+      this.addr = addr
+    }
+
+    function saveFunc() {
+      addrData.push(new Human(name.value, tel.value, addr.value));
+      console.log(addrData);
+      showFunc();
+    }
+
+    function showFunc() {
+      let list = `
+        <table>
+          <th>순번</th>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>주소</th>
+        `;
+        // for(let i=0; i<addrData.length; i++) {
+        // }
+        for(let idx in addrData) {
+          list += `
+            <tr>
+              <td>${Number(idx)+1}</td>
+              <td>${addrData[idx].name}</td>
+              <td>${addrData[idx].tel}</td>
+              <td>${addrData[idx].addr}</td>
+            </tr>
+          `;
+          }
+      list += '</table>';
+      result.innerHTML = list;
+    }
+  </script>
+</body>
+</html>

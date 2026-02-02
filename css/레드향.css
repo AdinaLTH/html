@@ -1,0 +1,55 @@
+#container{
+  width: 600px;
+  margin: 0 auto;
+}
+.redhyang{
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 5px;
+}
+.redhyang img{
+  width: 200px;
+  height: 230px;
+}
+.salad{
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+.salad img{
+  width: 150px;
+  height: 180px;
+}
+.tb{
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.tb table{
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.tb th{
+  background-color: beige;
+  padding: 3px 30px;
+}
+.tb td{
+  padding: 3px 30px;
+}
+.tb .category{
+  background-color: #ccc;
+}
+.f_left{
+  float: left;
+  margin-right: 20px;
+}
+.f_right{
+  float: right;
+  margin-left: 20px;
+}
+ol li{
+  line-height: 2;
+}

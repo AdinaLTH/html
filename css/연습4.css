@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+  font-family: "맑은 고딕";
+}
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* 헤더영역 */
+header{
+  text-align: center;
+}
+nav{
+  background-color: #000;
+  overflow: hidden;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+nav li{
+  float: left;
+  list-style: none;
+}
+nav li:last-child{
+  float: right;
+}
+nav a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+}
+/* 좌측영역 */
+/* 섹션영역 */
+/* 푸터영역 */

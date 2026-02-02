@@ -1,0 +1,143 @@
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    body{
+      background-color: rgb(176, 226, 153);
+    }
+    #container{
+      width: 800px;
+      margin: 0 auto; /* 화면 가운데 배치 */
+      padding: 20px;
+      border: 2px solid #0000ff;
+    }
+    main ol{
+      /* list-style-position: inside; */
+      text-align: center;
+    }
+    header{
+      background-color: azure;
+    }
+    .accent{
+      color: #00f;
+    }
+    main{
+      background-color: yellow;
+      padding: 10px; /* 안여백 지정 */
+    }
+    main .float{
+      background-color: bisque;
+      /* height: 10px; */
+      padding: 10px;
+      text-align: center;
+      /* 부모가 자신의 크기가 있을 때 넘친 자식은 보여주지 않음 */
+      /* 자식이 float으로 넘쳤을 때 영역 인정, 단 부모 크기가 정해지지 않았을 때 */
+      overflow: hidden;
+    }
+    .right {
+      float: right;
+    }
+    main ul li{
+      float: left;
+      list-style: none;
+      padding: 5px 40px;
+      /* margin: 5px 40px; */
+      border: 1px solid #ccc;
+    }
+    main li:hover{ /* 롤오버 효과  : 마우스 올리면 */
+      background-color: #000;
+      color: #fff;
+      border-radius: 20px;
+    }
+    main ol{
+      background-color: aqua;
+      overflow: hidden;
+      padding: 10px;
+    }
+    main ol li{
+      float: left;
+      list-style: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    /* main ol .right{
+      float: right;
+    } */
+    /* main .float .right{
+      float: right;
+    } */
+    figure img{
+      display: block;
+    }
+    table{
+      border: 2px solid gray;
+      border-collapse: collapse;
+      width: 90%;
+    }
+    th, td{
+      border: 1px solid gray;
+      padding: 10px;
+    }
+    thead{
+      text-align: center;
+      background-color: pink;
+    }
+    tfoot{
+      text-align: center;
+      background-color: gray;
+    }
+    tbody{
+      text-align: center; /* 글자 가운데 정렬 */
+      background-color: #fff;
+    }
+    #hylink{
+      border: 2px solid #aaa;
+      padding: 10px;
+      text-align: center;
+    }
+    #hylink h3{
+      text-align: left;
+    }
+    #hylink a{
+      margin: 30px 40px;
+      display: inline-block;
+    }
+    aside{
+      background-color: greenyellow;
+    }
+    footer{
+      font-family: "Nanum Pen Script", cursive;
+      background-color: blue;
+      color: white;
+    }
+    #menu{
+      font-family: "Nanum Pen Script", cursive;
+    }
+    nav li{
+      background-color: rgb(131, 131, 97);
+      margin-bottom: 5px;
+      display: inline-block;
+      padding: 10px;
+      margin: 30px 20px;
+      width: 65px;
+      height: 23px;
+      text-align: center;
+      line-height: 23px;
+      border-radius: 20px;
+    }
+    nav a{
+      text-decoration: none;
+      color: #fff;
+    }
+    #top{
+      width: 50px;
+      height: 50px;
+      background-color: #f00;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      position: fixed;
+      right: 50px;
+      bottom: 30px;
+    }
+    #top a{
+      text-decoration: none;
+      color: #fff;
+    }

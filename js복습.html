@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>복습</title>
+  <style>
+    table{
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    td{
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <h1>복습</h1>
+  <script>
+
+    /* // 3.
+    let name = prompt('이름을 입력하세요');
+    let score = Number(prompt('점수를 입력하세요'));
+    let result;
+
+    if(score >= 90){
+      result = '참잘했어요';
+    }else if(score >= 80){
+      result = '잘했어요';
+    }else{
+      result = '노력하세요';
+    }
+    document.write(`<h5>${result}</h5>`);
+    
+    // 4.
+    switch(parseInt(score/10)){
+      case 10:
+      case 9: result = '참잘했어요';
+      break;
+      case 8: result = '잘했어요';
+      break;
+      default: result = '노력하세요';
+    }
+    document.write(`<h5>${result}</h5>`);
+
+    // 5.
+    result = score % 2 == 0 ? '짝수' : '홀수';
+    console.log(result);
+
+    // 6.
+    result = score % 3 == 0 ? score + 100 : score - 100;
+    alert(result); */
+
+    /* 1에서 10 사이의 두 수를 입력받아서
+    두수 중에 작은 수는 행, 큰 수는 열로 하는 표 작성
+    표의 데이터는 행과 열을 곱한 값
+    표는 문서에 출력 */
+    let num1 = prompt('숫자를 입력하세요')
+    let num2 = prompt('숫자를 입력하세요')
+    let row, col;
+    let layout = '<table>';
+    if(num1 > num2){
+      row = num2;
+      col = num1;
+    }else{
+      row = num1;
+      col = num2;
+    }
+    for(let i=1; i<=row; i++){
+      layout += '<tr>';
+      for(let j=1; j<=col; j++){
+        layout += `<td>${i*j}</td>`;
+      }
+      layout += '</tr>';
+    }
+    layout += '</table>';
+    document.write(layout);
+  </script>
+</body>
+</html>
