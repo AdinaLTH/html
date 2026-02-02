@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      // Ajax(Asynchronous Javascript And Xml)
+      fetch("http://192.168.0.9:3000/students/all") // json 문자열
+        .then((resp) => resp.json()) // json 문자열 => js 객체
+        .then((data) => {
+          console.log(data);
+          const ulDom = document.createElement("ul"); // <ul></ul>
+          // for .. of 반복문.
+          for (let student of data) {
+            console.log(student);
+            const liDom = document.createElement("li"); // <li></li>
+            liDom.innerHTML = `${student.STUDNO}, ${student.NAME}`; // <li>9411, James Seo</li>
+            ulDom.appendChild(liDom); // <ul><li>9411, James Seo</li></ul>
+          }
+          document.querySelector("#container").appendChild(ulDom); // <div><ul><li>9411, James Seo</li></ul></div>
+        })
+        .catch(console.log);
+    </script>
+  </body>
+</html>
